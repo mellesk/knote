@@ -1,0 +1,18 @@
+- hosts: webservers
+  tasks:
+# Clones the public repository in the clone folder inside master cluster.
+  - name: Clone a PUBLIC repo
+    ansible.builtin.git:
+      repo: https://github.com/mellesk/knote  
+      dest: /tmp/kubernetes
+      clone: yes
+      update: yes
+# Excute Playbooks
+# - name:  Excute playbooks
+ #  shell: kubectl apply -f mongo.yml
+ #         kubectl apply -f mongo-service.yml
+  #        kubectl apply -f knote.yml
+   #       kubectl apply -f knote-service.yml
+
+
+
